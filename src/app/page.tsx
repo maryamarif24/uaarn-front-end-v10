@@ -1,16 +1,18 @@
 "use client";
 import Link from "next/link";
 import FeatureCard from "./components/FeatureCard";
+import { Sparkles, ShieldCheck, Code } from "lucide-react";
 import ContactPage from "./contact/page";
 import CoursesPage from "./courses/page";
 import AboutPage from "./about/page";
 import DarkCommunitySection from "./components/DarkCommunitySection";
+import CareerSection from "./components/CareerSection";
 
 export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center px-8 py-34 text-center bg-gradient-to-b from-white to-slate-50">
+      <section className="hero flex flex-col items-center justify-center px-8 py-34 text-center bg-gradient-to-b from-white to-slate-50">
         <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight max-w-3xl">
           Empower Your Learning with{" "}
           <span className="text-blue-600">AI Intelligence</span>
@@ -21,10 +23,10 @@ export default function HomePage() {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
-            href="/contact"
+            href="/ask"
             className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition"
           >
-            Contact Sales
+            Ask UAARN
           </Link>
           <Link
             href="/about"
@@ -45,25 +47,28 @@ export default function HomePage() {
           </h3>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <FeatureCard
-              title="AI-Powered Q&A"
-              desc="Ask any question and get instant, detailed answers with explanations powered by Gemini AI."
-              icon="🤖"
-            />
-            <FeatureCard
-              title="Personalized Learning"
-              desc="UAARN learns your study patterns and provides intelligent topic guidance and summaries."
-              icon="🎯"
-            />
-            <FeatureCard
-              title="Simple & Fast"
-              desc="No complex setup — just ask, learn, and grow with a few clicks."
-              icon="⚡"
-            />
+  title="Smart AI"
+  desc="Enhance your workflow with intelligent automation and insights."
+  icon={Sparkles}   // ✅ Component, not a string or emoji
+/>
+
+<FeatureCard
+  title="Secure Platform"
+  desc="Your data is protected with advanced encryption and access control."
+  icon={ShieldCheck}
+/>
+
+<FeatureCard
+  title="Developer Friendly"
+  desc="Built with modern technologies for easy customization and speed."
+  icon={Code}
+/>
           </div>
         </div>
       </section>
 
       <CoursesPage />
+      <CareerSection />
       <ContactPage />
       <DarkCommunitySection />
 
