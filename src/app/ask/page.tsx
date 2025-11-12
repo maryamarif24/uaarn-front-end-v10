@@ -32,7 +32,7 @@ export default function AskPage() {
         setLoading(true);
 
         try {
-            const res = await fetch(`${BACKEND_URL}/ask/api/chat`, {
+            const res = await fetch(`${BACKEND_URL}/ask`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
