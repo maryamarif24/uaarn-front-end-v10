@@ -36,7 +36,7 @@ function SummarizePage() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const BACKEND_URL =
-    process.env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:8000" || "https://uaarn-production.up.railway.app/api/agent/summarize";
+    process.env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:8000";
 
   useEffect(() => {
     if (isLoaded && !isSignedIn) router.push("/sign-in");
